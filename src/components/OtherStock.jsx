@@ -13,18 +13,18 @@ import tote11 from '../assets/monoclebag.jpg';
 import tote12 from '../assets/happybag.jpg';
 
 const products = [
-  { image: tote1, name: 'Chinos', price: 'N$5,000' },
-  { image: tote2, name: 'Chinos', price: 'N$5,000' },
-  { image: tote3, name: 'Chinos', price: 'N$5,000' },
-  { image: tote4, name: 'Chinos', price: 'N$5,000' },
-  { image: tote5, name: 'Chinos', price: 'N$5,000' },
-  { image: tote6, name: 'Chinos', price: 'N$5,000' },
-  { image: tote7, name: 'Chinos', price: 'N$5,000' },
-  { image: tote8, name: 'Chinos', price: 'N$5,000' },
-  { image: tote9, name: 'Chinos', price: 'N$5,000' },
-  { image: tote10, name: 'Chinos', price: 'N$5,000' },
-  { image: tote11, name: 'Chinos', price: 'N$5,000' },
-  { image: tote12, name: 'Chinos', price: 'N$5,000' },
+  { image: tote1, name: 'Chinos', price: 'N5,000' },
+  { image: tote2, name: 'Chinos', price: 'N5,000' },
+  { image: tote3, name: 'Chinos', price: 'N5,000' },
+  { image: tote4, name: 'Chinos', price: 'N5,000' },
+  { image: tote5, name: 'Chinos', price: 'N5,000' },
+  { image: tote6, name: 'Chinos', price: 'N5,000' },
+  { image: tote7, name: 'Chinos', price: 'N5,000' },
+  { image: tote8, name: 'Chinos', price: 'N5,000' },
+  { image: tote9, name: 'Chinos', price: 'N5,000' },
+  { image: tote10, name: 'Chinos', price: 'N5,000' },
+  { image: tote11, name: 'Chinos', price: 'N5,000' },
+  { image: tote12, name: 'Chinos', price: 'N5,000' },
 ];
 
 export default function OtherStock() {

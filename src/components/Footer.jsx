@@ -6,7 +6,7 @@ const quickLinks = [ 'Terms & Conditions', 'Privacy Policy', 'Contact Us', 'Term
 export default function Footer() {
   return (
     <footer className="w-full bg-[#0c0c0c] text-white font-sans px-4 sm:px-8 lg:px-16 pt-14 pb-6">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 mb-70">
         <div>
           <p className="text-sm text-slate-300 max-w-xs leading-relaxed">
             We provide comfy tote bags that won't mess up your style and have plenty of space for all your stuff.
@@ -26,8 +26,8 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="text-lg font-semibold">Quick links</h3>
-          <ul className="mt-5 flex flex-col gap-3 text-sm text-slate-300">
+          <h3 className="text-lg font-semibold ml-40">Quick links</h3>
+          <ul className="mt-5 flex flex-col gap-3 text-sm text-slate-300 ml-40">
             {quickLinks.map((link) => (
               <li key={link}>
                 <a href="#" className="hover:text-white transition-colors">

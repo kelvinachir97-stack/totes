@@ -1,7 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { FiSearch, FiUser, FiShoppingCart, FiSliders, FiMenu, FiX } from 'react-icons/fi';
 
-const navLinks = ['Home', 'Shop'];
+const navLinks = [
+   { label: 'Home', to: '/' },
+   { label: 'Shop', to: '/cart' },
+];
 const filters = ['All', 'Corduroy', 'Denim', 'Adire', 'Leather'];
 
 export default function Navbar() {
@@ -80,30 +84,30 @@ export default function Navbar() {
 
                   <ul className="flex flex-col gap-6 lg:flex-row lg:gap-6 text-xs font-medium tracking-widest uppercase">
                      {navLinks.map((link, index) => (
-                        <li key={link}>
-                           <a
-                              href="#"
+                        <li key={link.label}>
+                           <Link
+                              to={link.to}
                               aria-current={index === 1 ? 'page' : undefined}
                               className={`relative pb-1 hover:text-slate-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 rounded ${
                                  index === 1 ? 'after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-4 after:bg-slate-900' : ''
                               }`}
                            >
-                              {link}
-                           </a>
+                              {link.label}
+                           </Link>
                         </li>
                      ))}
                   </ul>
                </div>
             </div>
 
-            <a
-               href="#"
+            <Link
+               to="/"
                className="absolute left-1/2 -translate-x-1/2 flex items-start text-2xl md:text-3xl font-light tracking-tight text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 rounded"
             >
                <span className="sr-only">The Tote Bag Shop</span>
                <span aria-hidden="true">thetotebagshop</span>
                <sup className="text-xs ml-0.5 mt-1" aria-hidden="true">®</sup>
-            </a>
+            </Link>
 
             <div className="flex items-center gap-5 text-slate-900">
                <button
@@ -113,14 +117,14 @@ export default function Navbar() {
                >
                   <FiUser size={20} />
                </button>
-               <button
-                  type="button"
+               <Link
+                  to="/cart"
                   aria-label="Cart"
                   className="relative cursor-pointer hover:text-slate-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 rounded"
                >
                   <FiShoppingCart size={20} />
                   <span className="absolute -top-1 -right-1 h-2 w-2 rounded-full bg-slate-900" />
-               </button>
+               </Link>
             </div>
          </nav>
 

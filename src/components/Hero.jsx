@@ -20,32 +20,32 @@ export default function Hero() {
             <span className="h-2 lg:h-2.5 w-3 lg:w-3.5 rounded-full bg-slate-900" />
           </div>
 
-          <div className="absolute left-6 sm:left-10 lg:left-16 top-1/2 -translate-y-1/2 w-[36%] z-10">
-            <p className="text-[10px] lg:text-xs tracking-[0.15em] uppercase text-slate-500">
-              Trending Totebags
-            </p>
-            <h3 className="text-xl sm:text-2xl lg:text-4xl xl:text-5xl leading-tight font-medium mt-1">
-              Leather Totebags
-            </h3>
-            <p className="text-[10px] sm:text-xs lg:text-sm text-slate-900 mt-2 lg:mt-3 leading-snug">
-              Totebag's made with leather fabric. This fabric is usually stronger than the others.
-            </p>
-          </div>
+          <div className="absolute left-5 sm:left-10 lg:left-16 top-1/2 -translate-y-1/2 w-[60%] sm:w-[45%] lg:w-[36%] z-10 mt-23">
+  <p className="text-[10px] lg:text-xs tracking-[0.15em] uppercase text-slate-500">
+    Trending Totebags
+  </p>
+  <h3 className="text-xl sm:text-2xl lg:text-4xl xl:text-5xl leading-tight font-medium mt-1">
+    Leather Totebags
+  </h3>
+  <p className="text-[11px] sm:text-xs lg:text-sm text-slate-900 mt-2 lg:mt-3 leading-snug">
+    Totebag's made with leather fabric. This fabric is usually stronger than the others.
+  </p>
+</div>
 
-          <img
-            src={womanOne}
-            alt="Woman carrying a leather totebag"
-            className="absolute top-[-33%] right-[80px] h-[135%] w-auto object-contain object-top"
-          />
+<img
+  src={womanOne}
+  alt="Woman carrying a leather totebag"
+  className="absolute top-[-20%] sm:top-[-30%] lg:top-[-36%] right-[4%] sm:right-[10%] lg:right-[178px] h-[100%] sm:h-[120%] lg:h-[135%] w-auto object-contain object-top"
+/>
 
-          <img
-            src={womanTwo}
-            alt=""
-            aria-hidden="true"
-            className="absolute bottom-0 left-[74%] h-[70%] w-auto object-contain object-bottom"
-          />
-        </div>
-      </div>
+<img
+  src={womanTwo}
+  alt=""
+  aria-hidden="true"
+  className="hidden sm:block absolute bottom-0 left-[70%] lg:left-[74%] h-[45%] sm:h-[60%] lg:h-[70%] w-auto object-contain object-bottom"
+/>
+</div>
+</div>
     </section>
   );
 }
