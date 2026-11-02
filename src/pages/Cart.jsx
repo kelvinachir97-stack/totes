@@ -1,8 +1,9 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FaStar, FaRegStar, FaTruck } from "react-icons/fa";
 import { FiChevronDown, FiMinus, FiPlus, FiCircle, FiCheckCircle } from "react-icons/fi";
 import Card from "../components/Card";
+import Reviews from "../components/Reviews";
 import mainImage from "../assets/white-bag.jpeg";
 import whiteImage from "../assets/white-bag.jpeg";
 import blackImage from "../assets/monoclebag.jpg";
@@ -15,9 +16,9 @@ const swatches = [
   { name: "GREY", image: greyImage },
 ];
 
-const shippingOptions = ["Zip", "Button", "Zip or Button", "None"];
+const shippingOptions = [ "Zip", "Button", "Zip or Button", "None" ];
 
-const locations = ["Lagos", "Abuja", "Port Harcourt", "Kano", "Ibadan"];
+const locations = [ "Lagos", "Abuja", "Port Harcourt", "Kano", "Ibadan" ];
 
 const similarBags = [
   { image: whiteImage, name: "Chinos", price: "N5,000" },
@@ -35,10 +36,10 @@ const description =
 
 export default function Cart() {
   const navigate = useNavigate();
-  const [activeSwatch, setActiveSwatch] = useState("WHITE");
-  const [shipping, setShipping] = useState("Zip");
-  const [quantity, setQuantity] = useState(1);
-  const [location, setLocation] = useState("");
+  const [ activeSwatch, setActiveSwatch ] = useState("WHITE");
+  const [ shipping, setShipping ] = useState("Zip");
+  const [ quantity, setQuantity ] = useState(1);
+  const [ location, setLocation ] = useState("");
 
   const activeImage = swatches.find((s) => s.name === activeSwatch).image;
 
@@ -64,9 +65,8 @@ export default function Cart() {
                 className="flex flex-col items-center gap-2 text-[11px] tracking-wide"
               >
                 <div
-                  className={`w-24 h-28 sm:w-28 sm:h-32 border bg-white overflow-hidden ${
-                    activeSwatch === s.name ? "border-slate-900" : "border-slate-200"
-                  }`}
+                  className={`w-24 h-28 sm:w-28 sm:h-32 border bg-white overflow-hidden ${activeSwatch === s.name ? "border-slate-900" : "border-slate-200"
+                    }`}
                 >
                   <img src={s.image} alt={s.name} className="w-full h-full object-cover" />
                 </div>
@@ -107,7 +107,7 @@ export default function Cart() {
 
           <div className="flex items-center gap-2 mt-3">
             <div className="flex gap-1 bg-black px-2 py-1 rounded text-yellow-400 text-sm">
-              {[...Array(5)].map((_, i) => (i < 4 ? <FaStar key={i} /> : <FaRegStar key={i} />))}
+              {[ ...Array(5) ].map((_, i) => (i < 4 ? <FaStar key={i} /> : <FaRegStar key={i} />))}
             </div>
             <span className="border border-slate-200 px-2 py-0.5 rounded text-xs">2.4</span>
           </div>
@@ -183,6 +183,8 @@ export default function Cart() {
           ))}
         </div>
       </div>
+
+      <Reviews />
     </section>
   );
 }
